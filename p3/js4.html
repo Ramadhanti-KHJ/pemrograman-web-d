@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // jQuery code can be placed here
+            var judul = $("#judul").text();
+            console.log("Isi dari judul: " + judul);
+
+        });
+
+        function kali() {
+                var bil1 = $("#bil1").val();
+                var bil2 = $("#bil2").val();
+                var hasil = bil1 * bil2;
+                $("#hasil").val(hasil);
+                console.log("bilangan 1: " + bil1);
+                console.log("bilangan 2: " + bil2);
+                console.log("Hasil perkalian: " + hasil);
+            }
+    </script>
+</head>
+<body>
+    <h1 id="judul">Belajar JavaScript</h1>
+    <p id="js1">JavaScript adalah salah satu bahasa pemrograman paling populer yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis. Jika HTML berfungsi untuk membentuk struktur dasar dan CSS mengatur tampilan visual, maka <a href="https://www.w3schools.com/js/default.asp">JavaScript</a> bertindak sebagai otak yang memberikan logika serta fungsionalitas. Dengan kode ini, Anda dapat membuat elemen yang dapat diklik, menampilkan animasi menarik, memproses data formulir, hingga memperbarui konten halaman secara langsung tanpa perlu memuat ulang seluruh layar. Keunggulan utama JavaScript terletak pada kemampuannya untuk berjalan secara langsung di dalam peramban web, sehingga sangat fleksibel dan menjadi fondasi utama bagi setiap pengembang web modern.</p>
+    <button onclick="ambilJudul()">Ammbil Judul</button>
+    <button onclick="ambilParagraf()">Ambil Paragraf (InnerText)</button>
+    <button onclick="ambilParagrafHTML()">Ambil Paragraf (innerHTML)</button>
+    <br>
+
+    Judul Baru: <input type="text" id="judulBaru" placeholder="Masukkan judul baru">
+
+    <button onclick="gantiJudul()">Ganti Judul</button>
+   
+    <h1>Perkalian</h1>
+    bilangan 1: <input type="number" id="bil1" placeholder="Masukkan bilangan pertama">
+    <br>
+    bilangan 2: <input type="number" id="bil2" placeholder="Masukkan bilangan kedua">
+    <br>
+    Hasil Perkalian: <input type="text" id="hasil" placeholder="Hasil perkalian akan muncul di sini" readonly>
+    <br>
+    <button onclick="kali()">Kali</button>
+</body>
+</html>
