@@ -12,7 +12,7 @@
 $nama = "Budi";
 $umur = 20;
 $ipk = 3.75;
-$aktif;
+$aktif = true;
 
 echo "Nama: " . $nama;
 echo "<br>";
